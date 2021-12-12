@@ -1,11 +1,12 @@
-package test.java.com.uni;
+package com.uni;
 
-import main.java.com.uni.Game;
-import main.java.com.uni.GameBoard;
-import main.java.com.uni.Tile;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import com.uni.Game;
+import com.uni.GameBoard;
+import com.uni.Tile;
 
 public class PBHummel009 {
 	

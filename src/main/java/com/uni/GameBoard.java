@@ -1,10 +1,21 @@
-import java.awt.*;
+package com.uni;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
 import java.util.Random;
 
 public class GameBoard implements GameBoardMove {
+    private boolean notValid;
+    private boolean move;
 
     public static final int ROWS = 4;
     public static final int COLS = 4;
@@ -121,10 +132,10 @@ public class GameBoard implements GameBoardMove {
         board[row][col] = new Tile(value, getTileX(col), getTileY(row));
     }
 
-    private void spawnRandom(){
+    public void spawnRandom(){
+    	setNotValid(true);
         Random random = new Random();
-        boolean notValid = true;
-        while(notValid){
+        while(isNotValid()){
             int location = random.nextInt(ROWS*COLS);
             int row = location / ROWS;
             int col = location % COLS;
@@ -133,7 +144,7 @@ public class GameBoard implements GameBoardMove {
                 int value = random.nextInt(10) < 9 ? 2 : 4;
                 Tile tile = new Tile(value, getTileX(col),getTileY(row));
                 board[row][col] = tile;
-                notValid = false;
+                setNotValid(false);
             }
         }
     }
@@ -227,10 +238,10 @@ public class GameBoard implements GameBoardMove {
         boolean canMove = false;
         Tile current = board[row][col];
         if (current == null) return false;
-        boolean move = true;
+        setMove(true);
         int newCol = col;
         int newRow = row;
-        while (move) {
+        while (isMove()) {
             newCol += horizontalDirection;
             newRow += verticalDirection;
             if (checkOutOfBounds(dir, newRow, newCol)) break;
@@ -249,7 +260,7 @@ public class GameBoard implements GameBoardMove {
                 score += board[newRow][newCol].getValue();
             }
             else {
-                move = false;
+                setMove(false);
             }
         }
         return canMove;
@@ -396,5 +407,21 @@ public class GameBoard implements GameBoardMove {
             if (!hasStarted) hasStarted = !dead;
         }
     }
+
+	public boolean isNotValid() {
+		return notValid;
+	}
+
+	public void setNotValid(boolean notValid) {
+		this.notValid = notValid;
+	}
+
+	public boolean isMove() {
+		return move;
+	}
+
+	public void setMove(boolean move) {
+		this.move = move;
+	}
 
 }

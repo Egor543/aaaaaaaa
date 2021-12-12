@@ -1,5 +1,9 @@
+package com.uni;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.Point;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Tile {
@@ -31,7 +35,7 @@ public class Tile {
     private boolean canCombine = true;
 
     public boolean canCombine() {
-        return canCombine;
+        return isCanCombine();
     }
 
     public void setCanCombine(boolean canCombine) {
@@ -155,4 +159,7 @@ public class Tile {
         this.x = x;
     }
 
+	public boolean isCanCombine() {
+		return canCombine;
+	}
 }

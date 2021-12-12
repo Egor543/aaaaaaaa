@@ -3,22 +3,62 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/Game.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/Direction.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/Tile.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/DrawUtils.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/test/java/tests.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/Game.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/GameBoard.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/GameBoardMove.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/Keys.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/Point.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/Start.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/uni/Tile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/uni/PBHummel009.java">
           <value>
             <set />
           </value>

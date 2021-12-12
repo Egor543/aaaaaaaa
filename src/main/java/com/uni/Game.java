@@ -1,8 +1,14 @@
-import javax.swing.*;
-import java.awt.*;
+package com.uni;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
+
+import javax.swing.JPanel;
 
 public class Game extends JPanel implements KeyListener, Runnable {
 
@@ -59,7 +65,7 @@ public class Game extends JPanel implements KeyListener, Runnable {
         double then = System.nanoTime();
         double unprocessed = 0;
 
-        while(running) {
+        while(isRunning()) {
            boolean shouldRender = false;
            double now = System.nanoTime();
            unprocessed += (now - then)/ nsPerUpdate;
@@ -96,15 +102,15 @@ public class Game extends JPanel implements KeyListener, Runnable {
     }
 
     public synchronized void start(){
-        if(running) return;
-        running = true;
+        if(isRunning()) return;
+        setRunning(true);
         game = new Thread(this,"game");
         game.start();
     }
 
     private synchronized  void stop(){
-        if(!running) return;
-        running = false;
+        if(!isRunning()) return;
+        setRunning(false);
         System.exit(0);
     }
 
@@ -123,5 +129,13 @@ public class Game extends JPanel implements KeyListener, Runnable {
     public void keyReleased(KeyEvent e) {
         Keys.keyReleased(e);
     }
+
+	public boolean isRunning() {
+		return running;
+	}
+
+	public void setRunning(boolean running) {
+		this.running = running;
+	}
 
 }

@@ -1,4 +1,6 @@
-import javax.swing.*;
+package com.uni;
+
+import javax.swing.JFrame;
 
 public class Start {
 

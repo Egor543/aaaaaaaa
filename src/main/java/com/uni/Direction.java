@@ -1,3 +1,5 @@
+package com.uni;
+
 public enum Direction {
     LEFT,
     RIGHT,
