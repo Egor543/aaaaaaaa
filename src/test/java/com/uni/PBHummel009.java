@@ -9,13 +9,6 @@ import com.uni.GameBoard;
 import com.uni.Tile;
 
 public class PBHummel009 {
-	
-	@Test
-	void testStart() {
-	    Game game = new Game();
-		game.start();
-		assertEquals(game.isRunning(), true);
-	}
 
 	@Test
 	void testSpawn() {
