@@ -1,4 +1,6 @@
-import java.awt.*;
+package com.uni;
+
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 
 public interface GameBoardMove {

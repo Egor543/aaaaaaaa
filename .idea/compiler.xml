@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="untitled2" />
-        <module name="OPI_2048part1-master" />
+        <module name="OPI_2048part1" />
       </profile>
     </annotationProcessing>
   </component>

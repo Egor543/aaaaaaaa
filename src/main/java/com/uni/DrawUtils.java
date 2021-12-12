@@ -1,4 +1,7 @@
-import java.awt.*;
+package com.uni;
+
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.font.TextLayout;
 import java.awt.geom.Rectangle2D;
 

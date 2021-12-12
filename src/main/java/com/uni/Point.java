@@ -1,3 +1,5 @@
+package com.uni;
+
 public class Point extends java.awt.Point {
 
     public int row;
